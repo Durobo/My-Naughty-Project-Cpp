@@ -1,8 +1,8 @@
 #==================
-# CPP
+# C++ / CMake Project (multi-project)
 #==================
 
-# Biên dịch chung
+# Object files / Libraries / Shared objects
 *.o
 *.obj
 *.so
@@ -11,18 +11,18 @@
 *.a
 *.lib
 
-# Binary thực thi
+# Executables
 *.exe
 *.out
 *.app
 
-# Thư mục build
-/build/
-/bin/
-/lib/
-/dist/
+# ----- Build output in ANY subfolder -----
+**/build/
+**/bin/
+**/lib/
+**/dist/
 
-# CMake
+# CMake generated files
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
@@ -32,7 +32,7 @@ Makefile
 .ninja_deps
 .ninja_log
 
-# IDE/Editor
+# IDE / Editor
 .vscode/
 .idea/
 *.swp
