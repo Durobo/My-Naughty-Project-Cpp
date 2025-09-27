@@ -1,0 +1,2 @@
+add_executable(my_robot_app main.cpp)
+target_link_libraries(my_robot_app PRIVATE components)
