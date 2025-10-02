@@ -3,6 +3,7 @@ add_library(myLib)
 target_sources(myLib
     PRIVATE
         src/employee.cpp
+        src/employeeFunc.cpp
 )
 
 target_include_directories(myLib

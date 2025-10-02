@@ -1,5 +1,7 @@
 #include "libHeader/employee.hpp"
+#include "libHeader/employeeFunc.hpp"
 #include <iostream>
+#include <vector>
 
 int main() {
     Employee employee_1;
@@ -18,4 +20,12 @@ int main() {
     Employee* employee_3 = new Employee("Pointer Duong", 20, 630);
     employee_3->show();
     delete employee_3;
+
+    std::vector<Employee> arr;
+    func::enter_arr(arr);
+    func::print_search_age_arr(arr);
+    func::print_search_salary_arr(arr);
+    func::print_search_name_arr(arr);
+
+    return 0;
 }
