@@ -6,6 +6,9 @@ class Employee {
         Employee();
         Employee(const char* name, int age, float salary);
 
+        Employee(const Employee& other);
+        Employee& operator= (const Employee& other);
+
         void set_name(const char* e_name);
         void set_age(int e_age);
         void set_salary(float e_salary);

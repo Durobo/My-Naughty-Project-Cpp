@@ -16,6 +16,24 @@ Employee::Employee(const char* name, int age, float salary)
         strcpy(m_name, name);
     }
 
+Employee::Employee(const Employee& other)
+    : m_age(other.m_age),
+    m_salary(other.m_salary) {
+        m_name = new char[strlen(other.m_name) + 1];
+        strcpy(m_name, other.m_name);
+    }
+
+Employee& Employee::operator=(const Employee& other) {
+    if (this != &other) {
+        delete[] m_name;
+        m_name = new char[strlen(other.m_name) + 1];
+        strcpy(m_name, other.m_name);
+        m_age = other.m_age;
+        m_salary = other.m_salary;
+    }
+    return *this;
+}
+
 void Employee::set_name(const char* e_name) {
     delete[] m_name;
     m_name = new char[strlen(e_name) + 1];
